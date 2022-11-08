@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/Logos/favicon_yard_sale.svg" type="img">
+    <style>
+        :root {
+            /*Colors*/
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            /*Fonts*/
+            --small: 14px;
+            --medium: 16px;
+            --large: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 62.5%;
+        }
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+            padding: 10px;
+        }
+        
+        .title-container {
+            display: flex;
+            margin: 24px 24px 24px 0px;
+        }
+        .title-container img {
+            transform: rotate(180deg);
+            margin-right: 14px;
+        }
+        .title {
+            font-size: var(--large);
+            font-weight: bold;
+        }
+        .my-order-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .my-order-content .order {
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            padding: 0 24px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            background-color: var(--text-input-field);
+        }
+        .order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .order p span:nth-child(1) {
+            font-size: var(--medium);
+            font-weight: bold;
+        }
+        .order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+            font-size: var(--small);
+        }
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .shopping-cart figure img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-cart p:nth-child(2) {
+            color: var(--very-light-pink);
+        }
+        .shopping-cart p:nth-child(3) {
+            font-size: var(--medium);
+            font-weight: bold;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--medium);
+            font-weight: 400;
+            height: 50px;
+        }
+        @media (max-width:640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="title-container">
+            <img src="./assets/Icons/flechita.svg" alt="">
+            <p class="title">My Order</p>
+        </div>
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="">
+            </figure>
+            <p>Moto</p>
+            <p>$150,00</p>
+            <img src="./assets/Icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="">
+            </figure>
+            <p>Moto</p>
+            <p>$150,00</p>
+            <img src="./assets/Icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="">
+            </figure>
+            <p>Moto</p>
+            <p>$150,00</p>
+            <img src="./assets/Icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="">
+            </figure>
+            <p>Moto</p>
+            <p>$150,00</p>
+            <img src="./assets/Icons/icon_close.png" alt="">
+        </div>
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="">
+            </figure>
+            <p>Moto</p>
+            <p>$150,00</p>
+            <img src="./assets/Icons/icon_close.png" alt="">
+        </div>
+        <div class="my-order-content">
+            <div class="order">
+                <p>
+                    <span>Total</span>
+                </p>
+                <p>$560,00</p>
+            </div>
+        </div>
+        <button class="primary-button">Checkout</button>
+    </aside>
+</body>
+
+</html>
