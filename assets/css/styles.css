@@ -1,3 +1,4 @@
+/* Variables*/
 :root {
     /*Colors*/
     --very-light-pink: #C7C7C7;
@@ -10,17 +11,18 @@
     --medium: 16px;
     --large: 18px;
 }
-
+/* Universales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+/* Body*/
 body {
     font-family: 'Quicksand', sans-serif;
     font-size: 62.5%;
 }
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -89,6 +91,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+/* Desktop Menu*/
 .desktop-menu {
     position: absolute;
     top: 45px;
@@ -128,6 +131,46 @@ nav {
         font-size: var(--small);
         display: inline-block;
     }
+/* Mobile Menu*/
+.top-menu {
+    position: absolute;
+    top: 0px;
+}
+.mobile-menu {
+    position: absolute;
+    top: 61px;
+    padding: 24px 24px 24px 0px;
+}
+    .mobile-menu a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+        /*display: inline-block;
+        margin-bottom: 24px;*/
+    }
+    .mobile-menu ul {
+        margin: 24px 0 0;
+        list-style: none;
+    }
+    .mobile-menu .top-menu ul:nth-child(1) {
+        border-bottom: 1px solid var(--very-light-pink);
+    }
+    .mobile-menu ul li {
+        margin-bottom: 24px;
+    }
+    .mobile-menu ul li a{
+        font-size: var(--small);
+    }
+    .mobile-menu .email {
+        color: var(--very-light-pink);
+        font-size: var(--small);
+        font-weight: 300;
+    }
+    .mobile-menu .sign-out {
+        color: var(--hospital-green);
+        font-size: var(--small);
+        font-weight: 300;
+    }
 
 @media (max-width:640px) {
     .menu {
@@ -137,6 +180,15 @@ nav {
         display: none;
     }
     .navbar-email {
+        display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width:641px) {
+    .mobile-menu {
         display: none;
     }
 }
