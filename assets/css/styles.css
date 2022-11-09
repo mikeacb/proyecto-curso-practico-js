@@ -140,6 +140,7 @@ nav {
     position: absolute;
     top: 61px;
     padding: 24px 24px 24px 0px;
+    background-color: var(--white);
 }
     .mobile-menu a {
         text-decoration: none;
@@ -171,6 +172,87 @@ nav {
         font-size: var(--small);
         font-weight: 300;
     }
+/* Shopping Cart --> Product detail y cart*/
+.product-detail {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    padding: 0 24px;
+    background-color: var(--white);
+}
+
+.title-container {
+    display: flex;
+    margin: 24px 24px 24px 0px;
+}
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.title {
+    font-size: var(--large);
+    font-weight: bold;
+}
+.my-order-content {
+    display: flex;
+    flex-direction: column;
+}
+.my-order-content .order {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: var(--text-input-field);
+}
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1) {
+    font-size: var(--medium);
+    font-weight: bold;
+}
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+    font-size: var(--small);
+}
+.shopping-cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.shopping-cart figure img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.shopping-cart p:nth-child(2) {
+    color: var(--very-light-pink);
+}
+.shopping-cart p:nth-child(3) {
+    font-size: var(--medium);
+    font-weight: bold;
+}
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--medium);
+    font-weight: 400;
+    height: 50px;
+}
 
 @media (max-width:640px) {
     .menu {
@@ -184,6 +266,9 @@ nav {
     }
     .desktop-menu {
         display: none;
+    }
+    .product-detail {
+        width: 100%;
     }
 }
 
