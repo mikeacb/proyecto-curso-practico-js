@@ -7,6 +7,7 @@ emailMenu.addEventListener('click', emailMenuState);
 function emailMenuState() {
     desktopMenu.classList.toggle('inactive');
     shoppingCartContainer.classList.add('inactive');
+    productDetailContainer.classList.add('inactive');
 }
 
 // Mobile Menu
@@ -16,8 +17,10 @@ const mobileMenu = document.querySelector('.mobile-menu');
 bgMenuIcon.addEventListener('click', bgMenuState);
 
 function bgMenuState() {
-    shoppingCartContainer.classList.add('inactive');
     mobileMenu.classList.toggle('inactive');
+    desktopMenu.classList.add('inactive');
+    shoppingCartContainer.classList.add('inactive');
+    productDetailContainer.classList.add('inactive');
 }
 
 // Cart Menu
@@ -27,9 +30,10 @@ const shoppingCartContainer = document.querySelector('#shopping-cart-container')
 cartMenuIcon.addEventListener('click', cartMenuStatus);
 
 function cartMenuStatus() {
-    mobileMenu.classList.add('inactive');
     shoppingCartContainer.classList.toggle('inactive');
+    mobileMenu.classList.add('inactive');
     desktopMenu.classList.add('inactive');
+    productDetailContainer.classList.add('inactive');
 }
 
 // Product List
@@ -61,6 +65,22 @@ productList.push({
     img: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=300'
 });
 
+const productDetailContainer = document.querySelector('#product-detail');
+const productDetailCloser = document.querySelector('.product-detail-close');
+
+productDetailCloser.addEventListener('click', closePDAside);
+
+// Abrir y cerrar las aside del product detail
+function openPDAside () {
+    productDetailContainer.classList.remove('inactive');
+}
+function closePDAside () {
+    productDetailContainer.classList.add('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
+    mobileMenu.classList.add('inactive');
+    desktopMenu.classList.add('inactive');
+}
+
 const cardsContainer = document.querySelector('.cards-container');
 
 function renderProducts(arr) {
@@ -69,6 +89,7 @@ function renderProducts(arr) {
         productCard.classList.add('product-card');
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.img);
+        productImg.addEventListener('click', openPDAside);
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
         const productInfoDiv = document.createElement('div');
